@@ -13,7 +13,6 @@ public class pictureImpl extends UnicastRemoteObject implements IPicture  {
 
     public String drawPic(String data) throws RemoteException {
         dataHandling dh = new dataHandling();
-        invertColor ic = new invertColor();
         edgeDetector ed = new edgeDetector();
 
         BufferedImage img=null;
@@ -22,15 +21,7 @@ public class pictureImpl extends UnicastRemoteObject implements IPicture  {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        CannyEdgeDetector detector = new CannyEdgeDetector();
-        //set thresdhold of low and high
-       // detector.setLowThreshold(1.0f);
-       // detector.setHighThreshold(5.0f);
 
-        // split to get the edge
-  //      detector.setSourceImage(img);
-  //      detector.process();
-//        BufferedImage edges = detector.getEdgesImage();
         BufferedImage edges = ed.edgeDectect(img);
         // convert the edge to binaryimage to get better line
      //  BufferedImage invertEdge = ic.invertedColor(edges);
