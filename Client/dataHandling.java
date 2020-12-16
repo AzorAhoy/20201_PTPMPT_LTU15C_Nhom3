@@ -12,7 +12,7 @@ import java.io.InputStream;
 public class dataHandling {
 
 
-    // convert BufferedImage to byte[]
+    // convert BufferedImage to byte []
     public static String toByteArray(BufferedImage bi, String format)
             throws IOException {
 
