@@ -23,7 +23,7 @@ public class invertColor {
                     int g = (0x0000ff00 & val) >> 8;
                     int b = (0x000000ff & val);
                     int m=(r+g+b);
-                    //(255+255+255)/2 =283 middle of dark and light
+                    //(255+255+255)/2 =283 middle of dark and light.
                     if(m<=675)
                     {
                         // for light color it set white
